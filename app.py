@@ -1,8 +1,9 @@
+from flask_cors import CORS
 from flask import Flask, request, jsonify
 import pandas as pd
 
 app = Flask(__name__)
-
+CORS(app)
 # List of valid crops
 VALID_CROPS = {
     'rice', 'maize', 'chickpea', 'kidneybeans', 'pigeonpeas', 'mothbeans',
